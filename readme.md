@@ -3,7 +3,7 @@
 This project is extendable prototype for smaller projects where all files are stored locally using csv,json,xml... and you can
 allow that all lists are loaded in RAM on startup of a program. 
 
-Inside "ClassDiagram" folder is class diagram of prototype
+Inside "ClassDiagram" folder is class diagram of prototype.
 
 Inside "School" folder is Visual Studio project that contains base code generated from class diagram from which some classes could be directly used for real project.
 
