@@ -1,38 +1,29 @@
 ﻿//Goal of this program is just to read and write from custom csv file  
+//Put a breakpoint in code and inspect states of listA and listB through debugger
 //BindingList is used so this code can be easily transfered to main project
-//Console.WriteLine("Hello, World!");
 
 using System.ComponentModel;
 using CSVserializationExample;
 
 
-
 BindingList<A> listA;
 BindingList<B> listB;
 
-//LOADING lists
-
+//DESERIALIZING
 listB = new BindingList<B>();
 BDataHandler Bhandler = new BDataHandler();
-
 listB = Bhandler.loadList();
 
-foreach(B b in listB)
-{
-    b.printMe();
-}
-
-
-
+//When loading A, only ids of Bs in listOfBs are loaded
+//Actual B objects will be added in LINKING section
 listA = new BindingList<A>();
 ADataHandler Ahandler = new ADataHandler();
-
 listA = Ahandler.loadList();
 
 
-//LNKING
+//LINKING
 //Now we need to link all B objects to ids in As list of Bs
-
+//This logic should be in linking services in real project
 foreach(A a in listA)
 {
     //Extract all ids from listOfBs and then clear list
@@ -57,9 +48,14 @@ foreach(A a in listA)
         }
     }
 }
+//WORK - START
+
+//In this section you can try manipualting with lists of As and Bs
 
 
-Console.WriteLine("This print is just so you have where to put breakpoint to see aftermath of linking in debugger.");
+//WORK - END
 
+//SERIALIZING
 
-
+Bhandler.saveList(listB);
+Ahandler.saveList(listA);

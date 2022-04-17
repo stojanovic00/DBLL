@@ -6,7 +6,7 @@ namespace Service
    {
       public void Startup()
       {
-            MessageBox.Show("Database loaded");
+         throw new NotImplementedException();
       }
    
    }

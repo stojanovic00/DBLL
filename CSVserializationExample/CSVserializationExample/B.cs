@@ -1,5 +1,4 @@
-﻿
-namespace CSVserializationExample
+﻿namespace CSVserializationExample
 {
     public class B
     {
@@ -7,7 +6,6 @@ namespace CSVserializationExample
         public int id;
         public string name;
         public int amount;
-
 
 
         public B() {
@@ -35,12 +33,6 @@ namespace CSVserializationExample
             this.id = id;
             this.name = name;
             this.amount = amount;
-        }
-
-
-       public void  printMe()
-        {
-            Console.WriteLine("id: " + id + " Name: " + name + " Amount: " + amount);  
         }
     }
 }

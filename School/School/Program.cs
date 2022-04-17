@@ -11,9 +11,6 @@ namespace School
         {
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-
-            StartupService startupService = new StartupService();
-            startupService.Startup();
         }
     }
 }

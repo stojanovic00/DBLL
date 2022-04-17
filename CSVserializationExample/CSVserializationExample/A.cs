@@ -5,7 +5,7 @@ namespace CSVserializationExample
     public class A
     {
         //For this example id generating algorithm won't be realized
-        //Random number generator will be used, but that is far by correct solution
+        //Random number generator will be used, but that is far from correct solution
         public int id;
         public string name;
         public string surname;
@@ -38,11 +38,5 @@ namespace CSVserializationExample
             this.listOfBs = new BindingList<B>();
             this.listOfBs = listB;
         }
-
-       public void  printMe()
-        {
-          //TODO  
-        }
-
     }
 }
